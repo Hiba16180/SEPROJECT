@@ -1,0 +1,76 @@
+  $cmd = 'python H:\\SeF\\SE\\app\\Http\\Controllers\\detector\\ArabDetector.py "' . request("body") . '"';
+
+        $descriptorspec = array(
+            0 => array('pipe', 'r'), // stdin
+            1 => array('pipe', 'w'), // stdout
+            2 => array('pipe', 'w') // stderr
+        );
+        $process = proc_open($cmd, $descriptorspec, $pipes);
+
+        // check opened 
+        if (is_resource($process)) {
+
+            //  non-blocking mode on stdout and stderr pipes
+            stream_set_blocking($pipes[1], 0); // stdout
+            stream_set_blocking($pipes[2], 0); // stderr
+
+            //  stdin pipe close cuz i wont be using it
+            fclose($pipes[0]);
+
+            // set up variables to store output and status
+            $stdout = '';
+            $stderr = '';
+            $status = null;
+
+            // poll the process until it exits = wait for it
+            while (($status = proc_get_status($process))['running']) {
+                // read any available data from stdout and stderr pipes
+                $read_streams = array($pipes[1], $pipes[2]);
+                $write_streams = null;
+                $except_streams = null;
+                if (stream_select($read_streams, $write_streams, $except_streams, 0)) {
+                    foreach ($read_streams as $stream) {
+                        if ($stream === $pipes[1]) {
+                            $stdout .= fread($stream, 8192);
+                        } elseif ($stream === $pipes[2]) {
+                            $stderr .= fread($stream, 8192);
+                        }
+                    }
+                }
+
+                // sleep briefly to avoid CPU thrashing = CPU trashing is a term used to describe a condition where the CPU is heavily overloaded with too many processes or tasks to handle at once. When this occurs, the CPU spends most of its time switching between different processes rather than executing them effectively, resulting in poor performance and reduced productivity.
+                usleep(10000);
+            }
+
+            // read any remaining data from stdout and stderr pipes
+            $stdout .= stream_get_contents($pipes[1]);
+            fclose($pipes[1]);
+            $stderr .= stream_get_contents($pipes[2]);
+            fclose($pipes[2]);
+
+            // Get the exit code of the process
+            $exit_code = $status['exitcode'];
+
+            // Clean up the process
+            proc_close($process);
+
+            // Do something with the output and status of the command
+            if ($exit_code === 0) {
+                $result = json_decode($stdout, true);
+                // Handle successful execution
+                Log::debug($result);
+                Log::debug($exit_code);
+                Log::debug($stderr);
+            } else {
+                // Handle error execution
+            }
+        }
+
+
+
+php artisan make:job detector
+
+
+
+
+
