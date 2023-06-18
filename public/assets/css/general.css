@@ -1,0 +1,260 @@
+.body{
+    overflow: hidden;
+  }
+  
+.filters{
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    width: auto;
+    overflow:hidden;
+ }
+ 
+ 
+ .filtered{
+     max-width: auto;
+     font-size: 16px !important;
+     border-radius: 5px;
+     border-color: transparent;
+     padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+     font-family: var(--bs-btn-font-family);
+     font-size: var(--bs-btn-font-size);
+     font-weight: var(--bs-btn-font-weight);
+     line-height: var(--bs-btn-line-height);
+     color: var(--bs-btn-color);
+     text-align: center;
+     vertical-align: middle;
+     cursor: pointer;
+     user-select: none;
+     background-color: var(--bs-btn-bg);
+     transition: all 0.15s ease-in;
+     padding-right: 15px;
+     padding-left: 15px;
+     padding: 8px;
+     margin: 10px;
+ }
+ @media (max-width: 468px) {
+     .filtered{
+         font-size: 10px;
+     }
+ }
+ 
+ 
+
+ .posts{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center; 
+     width: auto;
+     overflow:hidden;
+     padding-top: 20 !important;
+
+ }
+ .post{
+     padding: 10px;
+     width: 30%;
+     margin: 5px;
+ }
+ 
+ .indv-posts,.paginate{
+  max-width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-start;
+ 
+  flex-direction: row-reverse;
+ 
+ 
+ }
+ 
+ .indv-post{
+     width: 1200px;
+ }
+ 
+ .info{
+     width: auto;
+     max-width: 180px;
+ }
+
+ 
+ .tag{
+     border-radius: 8px;
+     border: transparent;
+     background-color: rgb(239, 239, 239);
+     width: auto;
+     height: auto;
+     padding: 5px 10px 5px 10px ;
+     margin: 5px;
+     display: inline-block;
+ }
+
+
+
+.create-post,#post-create{
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transition: all .5s ease-in-out;
+ }
+
+ .post-it{
+     width: 90%;
+     border-radius: 5px;
+     border-color: grey;
+     margin: 10px;
+     padding: 10px;
+ }
+
+ .main-body{
+     display: grid;
+ }
+
+ .post-input{
+     width: 800px;
+ }
+
+ 
+input[type=checkbox]{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+input[type=submit]{
+    margin-top: 10px;
+}
+
+.filter input:checked + span{background-color: #ff8de4;}
+
+#post-create{
+    display: none;
+    width: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.paginate{
+    margin-top:100px
+}
+
+.paginate a{
+    margin-left: 5px;
+    margin-right: 5px; 
+    min-width: 200px;
+}
+.paginate a:hover,.paginate a:active{
+ color :crimson;
+ cursor: pointer;
+}
+.forms-container {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#upvote {
+    display: inline-block;
+    cursor: pointer;
+    color: #687074
+  } 
+  
+  
+.on {
+    color: rgb(244, 76, 129)!important;
+  }
+
+
+
+  
+.overlay{
+    background-color: rgba(0, 0, 0, .6);
+    position:absolute;
+    z-index: 9999999999999999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity .5s ease-in-out;
+    display: block;
+  }
+  
+
+  
+
+  .slfm{
+    height: auto;
+    width: auto;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    scroll-behavior: smooth;
+    display: block;
+    background-color: #e5e5e5;
+    padding: 50px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  #close-overlay:hover{
+    cursor: pointer;
+    background:red;
+  }
+
+
+  .counter {
+    text-align: center;
+    font-size: 36px;
+  }
+  
+  .count {
+    transition: 1s ease-out;
+  }
+  
+  .count.animate {
+    animation: count-up 1s ease-out forwards;
+  }
+  
+  @keyframes count-up {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

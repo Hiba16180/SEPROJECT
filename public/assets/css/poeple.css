@@ -1,0 +1,116 @@
+.cards,.col-lg-7 {
+    max-width: 600px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    max-width: 500px;
+    min-width: 500px;
+    margin: 10px;
+}
+.card,.col-12,.posts,.row,.mb-4{
+    overflow: visible;
+}
+.cards{
+    border-radius: 5px;
+}
+.cards:hover{
+    transform: scale(1.05);
+    z-index: 999999999;
+    box-shadow: -1px 2px 29px -5px rgba(210, 208, 208, 0.75);
+    -webkit-box-shadow: -1px 2px 29px -5px rgba(210, 208, 208, 0.75);
+    -moz-box-shadow: -1px 2px 29px -5px rgba(210, 208, 208, 0.75);
+}
+
+.user-im{
+    width: 222px;
+    height: 190px;
+    border-radius:20px;
+    float: right;
+}
+
+.people-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    width: auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.text-sm {
+    margin: 5px;
+    max-height: 100px;
+    min-height: 100px;
+  }
+
+
+
+  hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Set height */
+    background-color: #000; /* Set background color */
+    margin: 20px auto; /* Set margin to center horizontally */
+    width: 1500px !important; /* Set width to 50% of the parent container */
+  }
+
+
+  .see-all {
+    display: inline-block;
+    position: relative;
+    padding-right: 20px; 
+    color: #000; 
+    text-decoration: none;
+    right: 50%;
+    left: 50%;
+    display: inline-block;
+    position: relative;
+    padding-right: 20px; /* Adjust padding as needed */
+    color: #000; /* Adjust color as needed */
+    text-decoration: none;
+    margin:10px
+  }
+  
+  .see-all:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent; /* Adjust arrow size as needed */
+    border-bottom: 5px solid transparent; /* Adjust arrow size as needed */
+    border-left: 10px solid #000; /* Adjust arrow color as needed */
+  }
+  
+
+  .mb1618{
+    position: inherit;
+    width: fit-content;
+    margin:5px;
+  }
+  .form-control{
+    max-width: 300px;
+    min-width: 220px;
+    width: auto;
+    display: inline-block
+
+  }
+
+.yers{
+
+  align-content: center;
+  justify-content: center
+}
+
+.search-eng{
+  width : 100%;
+  align-items: center;  
+}
+
+
+
+.list-group{
+  display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}

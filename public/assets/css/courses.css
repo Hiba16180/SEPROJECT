@@ -1,0 +1,137 @@
+body{
+    overflow:hidden !important
+
+  }
+.progress {
+  height: 10px;
+}
+
+.progress-bar {
+  transition: width 0.3s ease-in-out;
+}
+
+.list-group-item .progress {
+  width: 100%;
+  height: 2px;
+}
+
+.list-group-item .progress-bar {
+  height: 100%;
+}
+
+
+
+
+input ,select,textarea{
+    min-width: 220px;
+    margin: 0px 10px 0px 10px;
+    display:inline-block
+} 
+select{
+    margin: 0
+}
+.center{
+    align-self: center;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.text-dar{
+    display: inline-block;
+}
+
+label{
+    margin:20px;
+}
+
+
+.main-content{
+    display: block;
+}
+
+.search-eng{
+    width:100% !important;
+    left: 0 !important;
+}
+
+.main-body{
+    display: block   ;
+}
+
+
+.mt-4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.list-group{
+    display: flex;
+}
+
+.col-md-7 {
+    width: 100%;
+  }
+  .mb1618{
+    align-self:center;
+  }
+  .card ,.col-lg-7{
+    padding: auto;
+    margin:0;
+    width: auto;
+  }
+
+
+
+  
+  .pt-45{
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+
+  .ovh{
+    overflow-y: scroll;
+  }
+
+  .cbd {
+  margin: 10px !important;
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 250px;
+  max-height: 250px;
+  }
+
+  .course-item{
+
+    margin-bottom: 50px !important;
+}
+
+
+.imgc{
+  max-height: 180px;
+}
+
+
+.card{
+  padding: 10px;
+}
